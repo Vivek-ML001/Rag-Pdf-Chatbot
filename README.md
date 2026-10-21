@@ -35,7 +35,8 @@ A normal LLM only knows what it learned during training. It has never seen **you
 
 > Think of it as an open-book exam. Instead of answering from memory, the LLM is handed the right pages of the book first.
 
----
+## Live:
+https://huggingface.co/spaces/vivek2477/pdf-rag-chatbot
 
 ## Features
 
