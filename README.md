@@ -1,4 +1,4 @@
-# 📄 RAG Chat with Groq
+#  RAG Chat with Groq
 
 Chat with your PDFs. Upload a document, ask a question in plain English, and get an answer that is **grounded in the document**, along with the exact pages it came from.
 
