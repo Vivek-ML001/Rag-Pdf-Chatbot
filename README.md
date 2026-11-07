@@ -35,8 +35,8 @@ A normal LLM only knows what it learned during training. It has never seen **you
 
 > Think of it as an open-book exam. Instead of answering from memory, the LLM is handed the right pages of the book first.
 
-## Live:
-https://huggingface.co/spaces/vivek2477/pdf-rag-chatbot
+## Live Demo:
+🔗 https://pdf-chatbot123.streamlit.app
 
 ## Features
 
@@ -307,14 +307,18 @@ Open **http://localhost:8501** in your browser.
 
 ## Future Improvements
 
-- Per-document filter (search inside one selected PDF)
-- Chat history and follow-up questions
-- Streaming answers token by token
-- Re-ranking retrieved chunks with a cross-encoder
-- OCR support for scanned PDFs
-- Hybrid search (keyword + semantic)
-- Evaluation of retrieval quality (hit rate, MRR)
-- Deployment on Streamlit Community Cloud or Hugging Face Spaces
+## Future Improvements
+
+- [x] Multi-chat sidebar (New chat + chat history)
+- [x] LangSmith tracing (retrieve → generate, latency and chunk inspection)
+- [ ] Follow-up questions (conversation memory)
+- [ ] Per-document filter (search inside one selected PDF)
+- [ ] Streaming answers token by token
+- [ ] Re-ranking retrieved chunks with a cross-encoder
+- [ ] OCR support for scanned PDFs
+- [ ] Hybrid search (keyword + semantic)
+- [ ] Evaluation of retrieval quality (hit rate, MRR)
+- [ ] Persistent vector store on cloud (Chroma Cloud / Qdrant)
 
 ---
 
