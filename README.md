@@ -278,23 +278,6 @@ Open **http://localhost:8501** in your browser.
 
 ---
 
-## Troubleshooting
-
-| Problem | Cause and fix |
-|---|---|
-| `GROQ_API_KEY not found in .env` | Create `.env` in the project root with `GROQ_API_KEY=...`, no quotes, no spaces |
-| `404 model_not_found` | The model was removed or is not available to your key. List models (see above) and change `llm_model` |
-| `No relevant context found` | Threshold too high, the question is not about the uploaded documents, or the PDF has no text |
-| `No text found` on upload | The PDF is scanned or image-only. It needs OCR first |
-| `'RAG' object has no attribute ...` | Streamlit cached the old class. Stop the server (`Ctrl+C`) and start it again |
-| `No space left on device` | Your disk is full. Free space (the app itself writes no temp files) |
-| `ImportError: cannot import name 'RAG'` | Check the import path: `from src.rag.rag_pipeline import RAG` |
-| `No module named 'torchvision'` in terminal | Harmless Streamlit watcher warning. Run with `--server.fileWatcherType none` to hide it |
-| First run is very slow | The embedding model is downloading and `torch` is loading. Later runs are fast |
-| No results after changing the collection | Rebuild the retriever or restart so it does not hold a stale collection reference |
-
----
-
 ## Limitations
 
 - **Scanned PDFs** are not supported (no OCR).
