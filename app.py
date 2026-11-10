@@ -91,7 +91,8 @@ with st.sidebar:
 st.markdown(
     """
     <div class="header">
-        <div class="title">📄 <span>RAG Chat with Groq</span></div>
+        <div class="title">📄 <span>
+サムヴァドPDF</span></div>
         <div class="subtitle">Ask questions about your documents</div>
     </div>
     """,
