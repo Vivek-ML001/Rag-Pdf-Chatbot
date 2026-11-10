@@ -117,7 +117,7 @@ def show_sources(hits):
 # ---------- Show current chat ----------
 if not chat["messages"]:
     st.markdown(
-        "<p style='text-align:center;color:#888'>Upload a PDF from the sidebar and start asking questions 👇</p>",
+        "<p style='text-align:center;color:#888'>Upload a PDF from the sidebar and start asking questions 📜 </p>",
         unsafe_allow_html=True,
     )
 
