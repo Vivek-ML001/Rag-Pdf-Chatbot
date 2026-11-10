@@ -30,6 +30,8 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+
 # ---------- Chat state ----------
 def new_chat():
     cid = uuid.uuid4().hex[:8]
@@ -96,6 +98,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+
 def show_sources(hits):
     if not hits:
         return
@@ -117,7 +120,6 @@ if not chat["messages"]:
         unsafe_allow_html=True,
     )
 
-    
 for msg in chat["messages"]:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
@@ -126,6 +128,9 @@ for msg in chat["messages"]:
 
 # ---------- Input ----------
 if query := st.chat_input("Ask a question about your documents"):
+    # history current query append hone se pehle bana lo (hits hata ke, sirf role + content)
+    history = [{"role": m["role"], "content": m["content"]} for m in chat["messages"]]
+
     if not chat["messages"]:
         chat["title"] = query[:40]  # pehle question se title
 
@@ -135,7 +140,7 @@ if query := st.chat_input("Ask a question about your documents"):
 
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            answer, hits = rag.ask(query, top_k, threshold)
+            answer, hits = rag.ask(query, top_k, threshold, history=history)
         st.markdown(answer)
         show_sources(hits)
 
