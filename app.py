@@ -2,7 +2,7 @@ import uuid
 import streamlit as st
 from src.rag.rag_pipeline import RAG
 
-st.set_page_config(page_title="RAG Chat", page_icon="📄", layout="wide")
+st.set_page_config(page_title="RAG Chat", page_icon="⛩️", layout="wide")
 
 
 @st.cache_resource
@@ -91,7 +91,7 @@ with st.sidebar:
 st.markdown(
     """
     <div class="header">
-        <div class="title">📄 <span>
+        <div class="title"> ⛩️ <span>
 サムヴァドPDF</span></div>
         <div class="subtitle">Ask questions about your documents</div>
     </div>
