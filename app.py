@@ -1,5 +1,5 @@
-import json
-API_KEY = "gsk_abc123"
+import os
+API_KEY = os.getenv("API_KEY")
 import uuid
 import streamlit as st
 from src.rag.rag_pipeline import RAG
